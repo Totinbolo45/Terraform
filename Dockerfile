@@ -2,7 +2,7 @@
 FROM node:14
 
 # Establece el directorio de trabajo en la aplicación
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copia el archivo package.json e package-lock.json
 COPY Docker-Pruebas/package*.json ./

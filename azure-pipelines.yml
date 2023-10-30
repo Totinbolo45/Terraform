@@ -6,6 +6,10 @@
 trigger:
 - main
 
+
+variables:
+  tag: '$(Build.BuildId)'
+
 pool:
   name: default
 
@@ -17,3 +21,5 @@ steps:
     tags: |
       Prueba
       1
+- script: |
+    docker run --name $(Build.BuildId)

@@ -16,4 +16,4 @@ pool:
 steps:
 - script: |
     docker build -t app:1 .
-    docker run -p 3000:3000 app:1
+    docker run -p 3000:3000 -d app:1

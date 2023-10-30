@@ -5,7 +5,7 @@ FROM node:14
 WORKDIR /app
 
 # Copia el archivo package.json e package-lock.json
-COPY Docker-Pruebas/package*.json ./
+COPY Docker-Pruebas/package*.json .
 
 # Instala las dependencias
 RUN npm install

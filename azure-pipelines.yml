@@ -14,12 +14,6 @@ pool:
   name: default
 
 steps:
-- task: Docker@2
-  inputs:
-    command: 'buildAndPush'
-    Dockerfile: '**/Docker-Pruebas/Dockerfile'
-    tags: |
-      $(tag)
-      
 - script: |
-    docker run $(Build.BuildId)
+    docker build -t app:1 .
+    docker run -p 3000:3000 app:1

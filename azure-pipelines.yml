@@ -22,4 +22,4 @@ steps:
       $(tag)
       
 - script: |
-    docker run --name $(Build.BuildId)
+    docker run $(Build.BuildId)
